@@ -1,7 +1,10 @@
-export default function Page(): JSX.Element {
-  return (
-    <div className="flex flex-row justify-content: center font-bold">
-      hi there form merchant
-    </div>
-  )
+"use client";
+
+import { useBalance } from "@repo/store/useBalance";
+
+export default function() {
+  const balance = useBalance();
+  return <div>
+    hi there {balance}
+  </div>
 }
